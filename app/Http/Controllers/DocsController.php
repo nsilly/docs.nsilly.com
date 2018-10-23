@@ -82,7 +82,6 @@ class DocsController extends Controller
         if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
             $canonical = 'docs/'.DEFAULT_VERSION.'/'.$sectionPage;
         }
-
         return view('docs', [
             'title' => count($title) ? $title->text() : null,
             'index' => $this->docs->getIndex($version),
