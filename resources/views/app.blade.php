@@ -14,25 +14,22 @@
     <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ mix('/assets/css/laravel.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7737514/7707592/css/fonts.css" />
     <link rel="apple-touch-icon" href="/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 </head>
 <body class="@yield('body-class', 'docs') language-php">
-    <div class="laracon-banner">
-        <!-- <img src="/assets/svg/laracon-logo.svg" alt=""> -->
-        Laravel Nova is now available!
-        <a href="https://nova.laravel.com">Get your copy today!</a>
-
-<!--         Spark 6.0, the official SaaS starter-kit built on Laravel, is now available!
-        <a href="https://spark.laravel.com">Get your copy today!</a> -->
-    </div>
+    <!-- <div class="laracon-banner">
+        <img src="/assets/svg/laracon-logo.svg" alt="">
+        nsilly is now available!
+        <a href="https://github.com/nsilly/nsilly">Ready!</a>
+    </div> -->
     <span class="overlay"></span>
 
     <nav class="main">
         <a href="/" class="brand nav-block">
-            {!! svg('laravel-logo') !!}
-            <span>Laravel</span>
+            <!-- {!! svg('laravel-logo') !!} -->
+            <img src="{{ asset('assets/img/silly-face.png') }}" style="max-width: 25px; margin-right: 10px" alt="logo">
+            <span>nsilly</span>
         </a>
 
         <div class="search nav-block invisible">
@@ -68,7 +65,7 @@
         </p>
     </footer>
 
-    <script>
+     <script>
         var algolia_app_id      = '{{ Config::get('algolia.connections.main.id', false) }}';
         var algolia_search_key  = '{{ Config::get('algolia.connections.main.search_key', false) }}';
         var version             = '{{ isset($currentVersion) ? $currentVersion : DEFAULT_VERSION }}';
@@ -79,13 +76,5 @@
     <script src="{{ mix('/assets/js/laravel.js') }}"></script>
     <script src="/assets/js/viewport-units-buggyfill.js"></script>
     <script>window.viewportUnitsBuggyfill.init();</script>
-    <script>
-        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
-        (function(d,t){
-            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)
-        }(document,'script'));
-    </script>
 </body>
 </html>

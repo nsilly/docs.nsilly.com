@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Illuminate\Filesystem\Filesystem;
 
 class Documentation
 {
@@ -42,9 +42,9 @@ class Documentation
      */
     public function getIndex($version)
     {
-        return $this->cache->remember('docs.'.$version.'.index', 5, function () use ($version) {
-            $path = base_path('resources/docs/'.$version.'/documentation.md');
-
+        return $this->cache->remember('docs.' . $version . '.index', 5, function () use ($version) {
+            $path = base_path('resources/docs/' . $version . '/documentation.md');
+            
             if ($this->files->exists($path)) {
                 return $this->replaceLinks($version, markdown($this->files->get($path)));
             }
@@ -62,8 +62,8 @@ class Documentation
      */
     public function get($version, $page)
     {
-        return $this->cache->remember('docs.'.$version.'.'.$page, 5, function () use ($version, $page) {
-            $path = base_path('resources/docs/'.$version.'/'.$page.'.md');
+        return $this->cache->remember('docs.' . $version . '.' . $page, 5, function () use ($version, $page) {
+            $path = base_path('resources/docs/' . $version . '/' . $page . '.md');
 
             if ($this->files->exists($path)) {
                 return $this->replaceLinks($version, markdown($this->files->get($path)));
@@ -95,7 +95,7 @@ class Documentation
     public function sectionExists($version, $page)
     {
         return $this->files->exists(
-            base_path('resources/docs/'.$version.'/'.$page.'.md')
+            base_path('resources/docs/' . $version . '/' . $page . '.md')
         );
     }
 
@@ -107,16 +107,7 @@ class Documentation
     public static function getDocVersions()
     {
         return [
-            'master' => 'Master',
-            '5.7' => '5.7',
-            '5.6' => '5.6',
-            '5.5' => '5.5',
-            '5.4' => '5.4',
-            '5.3' => '5.3',
-            '5.2' => '5.2',
-            '5.1' => '5.1',
-            '5.0' => '5.0',
-            '4.2' => '4.2',
+            '1.0' => '1.0',
         ];
     }
 }
