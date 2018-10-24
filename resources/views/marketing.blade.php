@@ -23,7 +23,7 @@
 
         <div class="content">
             <h1>Love beautiful code? We do too.</h1>
-            <p>The PHP Framework For Web Artisans</p>
+            <p>The Silly Framework</p>
         </div>
 
         @include('partials/browser')
