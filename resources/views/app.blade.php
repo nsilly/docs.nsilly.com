@@ -56,7 +56,7 @@
         <ul>
             @include('partials.main-nav')
         </ul>
-        <p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+        <p>nsilly is a framework built on top of <a href="https://expressjs.com" target="_blank">ExpressJS</a> with the idea from <a href="https://laravel.com" target="_blank">Laravel framework</a></p>
         <p class="less-significant">
             <a href="http://jackmcdade.com">
                 Designed by<br>
