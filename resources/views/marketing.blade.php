@@ -30,20 +30,18 @@
 
         <div class="macbook">
 <pre class="line-numbers"><code class="language-php">
-&lt;?php
 
-
-class Idea extends Eloquent
+export class Dream
 {
 
 	/**
-	 * Dreaming of something more?
+	 * Make your dream come true
 	 *
-	 * @with Laravel
+	 * @with silly framework
 	 */
-	public function create()
+	wakeUp()
 	{
-		// Have a fresh start...
+		// The silly ending...
 	}
 
 }</code></pre>
@@ -57,24 +55,21 @@ class Idea extends Eloquent
         <div class="callouts">
             <a href="/docs/horizon" class="callout minimal third">
                 <div class="callout-head">
-                    <div class="callout-title">Laravel Horizon</div>
-                    <div class="callout-icon">{!! svg('logo-horizon')!!}</div>
+                    <div class="callout-title">Comming Soon</div>
                 </div>
-                <p>Laravel Horizon provides a beautiful dashboard and code-driven configuration for your Redis queues.</p>
+                <p>...</p>
             </a>
             <a href="https://nova.laravel.com" class="callout minimal third">
                 <div class="callout-head">
-                    <div class="callout-title">Laravel Nova</div>
-                    <div class="callout-icon"><?php echo svg('laravel-nova'); ?></div>
+                    <div class="callout-title">Comming Soon</div>
                 </div>
-                <p>Laravel Nova is a beautiful administration panel designed by the creator of Laravel.</p>
+                <p>...</p>
             </a>
             <a href="/docs/broadcasting" class="callout minimal third">
                 <div class="callout-head">
-                    <div class="callout-title">Laravel Echo</div>
-                    <div class="callout-icon">{!! svg('logo-echo')!!}</div>
+                    <div class="callout-title">Comming Soon</div>
                 </div>
-                <p>Event broadcasting, evolved. Bring the power of WebSockets to your application without the complexity.</p>
+                <p>...</p>
             </a>
         </div>
 	</div>
