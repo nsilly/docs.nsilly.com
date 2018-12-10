@@ -22,7 +22,7 @@
 	<div class="container">
 
         <div class="content">
-            <h1>Love beautiful code? We do too.</h1>
+            <h1>It's bad, but it works!</h1>
             <p>The Silly Framework</p>
         </div>
 
@@ -48,30 +48,6 @@ export class Dream
             {!! svg('macbook') !!}
         </div>
 
-        <div class="callout rule">
-            <span class="text">See What's New!</span>
-        </div>
-
-        <div class="callouts">
-            <a href="/docs/horizon" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Comming Soon</div>
-                </div>
-                <p>...</p>
-            </a>
-            <a href="https://nova.laravel.com" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Comming Soon</div>
-                </div>
-                <p>...</p>
-            </a>
-            <a href="/docs/broadcasting" class="callout minimal third">
-                <div class="callout-head">
-                    <div class="callout-title">Comming Soon</div>
-                </div>
-                <p>...</p>
-            </a>
-        </div>
 	</div>
 </section>
 @endsection
