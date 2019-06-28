@@ -18,5 +18,10 @@ pipeline {
                 sh 'composer install'
             }
         }
+        stage('Deliver') { 
+            steps {
+                sh './.jenkins/scripts/deliver.sh'
+            }
+        }
     }
 }
