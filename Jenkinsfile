@@ -1,14 +1,21 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:12-alpine' 
-            args '-p 3000:3000' 
-        }
-    }
+    agent none
     stages {
-        stage('Build') { 
+        stage('Buid assets') {
+            agent {
+                docker { image 'node:12-alpine' }
+            }
             steps {
-                sh 'npm install' 
+                sh 'npm install'
+                sh 'npm run prod'
+            }
+        }
+        stage('Install PHP package') {
+            agent {
+                docker { image 'nightfuryest/php-composer' }
+            }
+            steps {
+                sh 'composer install'
             }
         }
     }
