@@ -29,7 +29,7 @@ pipeline {
                         folderCopyOperation(
                             destinationFolderPath: '/home/projects/nsilly.com',
                             sourceFolderPath: '.'
-                        ),
+                        )
                     ])
                 }
             }
