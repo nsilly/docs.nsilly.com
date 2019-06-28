@@ -12,13 +12,14 @@ pipeline {
         }
         stage('Install PHP package') {
             agent {
-                docker { image 'nightfuryest/php-composer:7.2' }
+                docker { image 'nightfuryest/php-composer:last' }
             }
             steps {
                 sh 'composer install'
             }
         }
         stage('Deliver') { 
+            agent any
             steps {
                 sh './.jenkins/scripts/deliver.sh'
             }
