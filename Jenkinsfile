@@ -25,7 +25,7 @@ pipeline {
                     fileOperations([
                         folderDeleteOperation(
                             './node_modules'
-                        )
+                        ),
                         folderCopyOperation(
                             destinationFolderPath: '/home/projects/nsilly.com',
                             sourceFolderPath: '.'
