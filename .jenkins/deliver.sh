@@ -2,4 +2,4 @@
 
 rm -rf node_modules
 
-cp -R . /home/projects/docs.nsilly.com
+yes | cp -rf . /home/projects/docs.nsilly.com/
