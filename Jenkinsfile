@@ -21,7 +21,17 @@ pipeline {
         stage('Deliver') { 
             agent any
             steps {
-                sh './.jenkins/scripts/deliver.sh'
+                script {
+                    fileOperations([
+                        folderDeleteOperation(
+                            './node_modules'
+                        )
+                        folderCopyOperation(
+                            destinationFolderPath: '/home/projects/nsilly.com',
+                            sourceFolderPath: '.'
+                        ),
+                    ])
+                }
             }
         }
     }
