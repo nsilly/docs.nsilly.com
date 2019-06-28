@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Install PHP package') {
             agent {
-                docker { image 'nightfuryest/php-composer' }
+                docker { image 'nightfuryest/php-composer:7.2' }
             }
             steps {
                 sh 'composer install'
