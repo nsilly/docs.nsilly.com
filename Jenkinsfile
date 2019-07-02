@@ -31,13 +31,7 @@ pipeline {
     }
     post { 
         success { 
-            steps {
-                sh 'php artisan migrate'
-                sh 'mkdir -p public/page-cache'
-                sh 'chmod -R 777 public/page-cache'
-                sh 'chmod -R 777 storage/*'
-                sh 'yes | cp -R . /home/projects/nsilly.com'
-            }
+            echo 'Hello World'
         }
     }
 }
