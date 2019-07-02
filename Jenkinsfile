@@ -30,9 +30,6 @@ pipeline {
             post {
                 success {
                     sh 'yes | cp -R . /home/projects/nsilly.com'
-                    sh 'mkdir -p /home/projects/nsilly.com/public/page-cache'
-                    sh 'chmod -R 777 /home/projects/nsilly.com/public/page-cache'
-                    sh 'chmod -R 777 /home/projects/nsilly.com/storage/*'
                 }
             }
         }
