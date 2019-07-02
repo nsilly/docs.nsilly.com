@@ -24,18 +24,14 @@ pipeline {
             steps {
                 dir('resources/docs/1.0') {
                     git branch: 'master', url: 'https://github.com/nsilly/docs.git'
+                    
                 }
-            }
-        }
-        stage('Deliver') { 
-            agent any
-            steps {
-                sh label: '', script: "ls"
+                sh('ls')
             }
         }
     }
     post { 
-        always { 
+        success { 
             sh 'php artisan migrate'
             sh 'mkdir -p public/page-cache'
             sh 'chmod -R 777 public/page-cache'
