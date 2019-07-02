@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm run prod'
+                sh 'rm -rf node_modules'
             }
         }
         stage('Install PHP package') {
@@ -21,17 +22,7 @@ pipeline {
         stage('Deliver') { 
             agent any
             steps {
-                script {
-                    fileOperations([
-                        folderDeleteOperation(
-                            './node_modules'
-                        ),
-                        folderCopyOperation(
-                            destinationFolderPath: '/home/projects/nsilly.com',
-                            sourceFolderPath: '.'
-                        )
-                    ])
-                }
+                sh label: '', script: "yes | cp -R . /var/www/nsilly.com"
             }
         }
     }
