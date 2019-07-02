@@ -31,7 +31,6 @@ pipeline {
     }
     post { 
         success { 
-            agent any
             steps {
                 sh 'php artisan migrate'
                 sh 'mkdir -p public/page-cache'
