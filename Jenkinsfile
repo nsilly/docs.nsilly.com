@@ -24,9 +24,7 @@ pipeline {
             steps {
                 dir('resources/docs/1.0') {
                     git branch: 'master', url: 'https://github.com/nsilly/docs.git'
-                    
                 }
-                sh('ls')
             }
         }
     }
