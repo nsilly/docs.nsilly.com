@@ -19,7 +19,7 @@ pipeline {
                 sh 'composer install'
             }
         }
-        stage('Install PHP package') {
+        stage('Checkout documentation file') {
             agent any
             steps {
                 dir('resources/docs/1.0') {
