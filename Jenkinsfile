@@ -27,6 +27,12 @@ pipeline {
                 }
             }
         }
+        stage('Deliver') { 
+            agent any
+            steps {
+                sh label: '', script: "ls"
+            }
+        }
     }
     post { 
         always { 
