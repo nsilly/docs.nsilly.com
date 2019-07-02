@@ -22,7 +22,7 @@ pipeline {
         stage('Deliver') { 
             agent any
             steps {
-                sh label: '', script: "yes | cp -R . /var/www/nsilly.com"
+                sh label: '', script: "yes | cp -R . /home/projects/nislly.com"
             }
         }
     }
