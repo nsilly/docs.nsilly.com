@@ -22,6 +22,7 @@ pipeline {
         stage('Deliver') { 
             agent any
             steps {
+                sh "echo \"$USER\""
                 sh label: '', script: "yes | cp -R . /home/projects/nsilly.com"
             }
         }
