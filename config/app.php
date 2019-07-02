@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://nsilly.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:K6g/TIWL5MJIrB8MsqXlkHMoUMt1VXVVU+sKPXRlWco='),
 
     'cipher' => 'AES-256-CBC',
 
