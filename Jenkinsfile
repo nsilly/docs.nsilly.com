@@ -27,12 +27,13 @@ pipeline {
                     
                 }
             }
-        }
-    }
-    post { 
-        success { 
-            node('docker') {
-                sh 'yes | cp -R . /home/projects/nsilly.com' 
+            post {
+                success {
+                    sh 'mkdir -p public/page-cache'
+                    sh 'chmod -R 777 public/page-cache'
+                    sh 'chmod -R 777 storage/*'
+                    sh 'yes | cp -R . /home/projects/nsilly.com'
+                }
             }
         }
     }
