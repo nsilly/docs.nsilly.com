@@ -26,17 +26,19 @@ pipeline {
                     git branch: 'master', url: 'https://github.com/nsilly/docs.git'
                     
                 }
-                sh('ls')
             }
         }
     }
     post { 
         success { 
-            sh 'php artisan migrate'
-            sh 'mkdir -p public/page-cache'
-            sh 'chmod -R 777 public/page-cache'
-            sh 'chmod -R 777 storage/*'
-            sh 'yes | cp -R . /home/projects/nsilly.com'
+            agent any
+            steps {
+                sh 'php artisan migrate'
+                sh 'mkdir -p public/page-cache'
+                sh 'chmod -R 777 public/page-cache'
+                sh 'chmod -R 777 storage/*'
+                sh 'yes | cp -R . /home/projects/nsilly.com'
+            }
         }
     }
 }
