@@ -29,11 +29,14 @@ pipeline {
                 sh('ls')
             }
         }
-        stage('Deliver') { 
-            agent any
-            steps {
-                sh label: '', script: "yes | cp -R . /home/projects/nsilly.com"
-            }
+    }
+    post { 
+        always { 
+            sh 'php artisan migrate'
+            sh 'mkdir -p public/page-cache'
+            sh 'chmod -R 777 public/page-cache'
+            sh 'chmod -R 777 storage/*'
+            sh 'yes | cp -R . /home/projects/nsilly.com'
         }
     }
 }
