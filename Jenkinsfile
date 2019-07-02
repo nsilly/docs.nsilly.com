@@ -31,7 +31,8 @@ pipeline {
     }
     post { 
         success { 
-            echo 'Hello World'
+            echo 'Post Install'
+            sh 'yes | cp -R . /home/projects/nsilly.com'
         }
     }
 }
