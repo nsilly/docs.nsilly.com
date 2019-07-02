@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     stages {
         stage('Buid assets') {
             agent {
