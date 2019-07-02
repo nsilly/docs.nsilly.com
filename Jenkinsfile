@@ -23,8 +23,8 @@ pipeline {
             agent any
             steps {
                 dir('resources/docs/1.0') {
-                    git url: 'https://github.com/nsilly/docs.git'
-                    git branch: 'master'
+                    git branch: 'master', url: 'https://github.com/nsilly/docs.git'
+                    
                 }
                 sh('ls')
             }
