@@ -31,8 +31,9 @@ pipeline {
     }
     post { 
         success { 
-            echo 'Post Install'
-            sh 'yes | cp -R . /home/projects/nsilly.com'
+            node('docker') {
+                sh 'yes | cp -R . /home/projects/nsilly.com' 
+            }
         }
     }
 }
