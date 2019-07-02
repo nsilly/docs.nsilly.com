@@ -19,6 +19,17 @@ pipeline {
                 sh 'composer install'
             }
         }
+        stage('Install PHP package') {
+            agent {
+                docker { image 'nightfuryest/php-composer:7.2' }
+            }
+            steps {
+                dir('resources/docs/1.0') {
+                    git url: 'https://github.com/nsilly/docs.git'
+                }
+                sh('ls')
+            }
+        }
         stage('Deliver') { 
             agent any
             steps {
